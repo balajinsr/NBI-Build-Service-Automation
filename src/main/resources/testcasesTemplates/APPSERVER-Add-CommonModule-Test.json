@@ -1,0 +1,97 @@
+{
+  "developer-build-Tasks": [
+    {
+      "taskId": "DT-000051918",
+      "commitFileList": [
+        {
+          "filePath": "CommonComponents/samplemodule/src/main/java/com/ca/nbiapps/otpimpl/MainClass.java",
+          "action": "add",
+          "md5Value": "26799fd3ce3ffe1b3b3609111160b422"
+        },
+        
+        {
+          "filePath": "CommonComponents/samplemodule/pom.xml",
+          "action": "add",
+          "md5Value": "10d269c1a38daf1464384af204a3d1f5"
+        },
+        {
+          "filePath": "CommonComponents/pom.xml",
+          "action": "add",
+          "md5Value": "58660236dd84fcccc045699db0152f74"
+        },
+        {
+          "filePath": "sonar-project.properties",
+          "action": "update",
+          "md5Value": "a32c1db8627244b773a1f1a03f564423"
+        },
+        
+        {
+          "filePath": "pom.xml",
+          "action": "update",
+          "md5Value": "83d6aa681250d7cd485e8fba100b2d9f"
+        }
+        
+      ],
+      "buildAssertValues": {
+        "buildStatus": "Build Success",
+        "expectedToVerify": {  
+          "isArtifactsAvailable" : true,
+          "verifyDBEntries": false,
+          "artifactUploadStatus": "Upload Success",
+          "expectedFilesInPackage": [
+            {
+              "filePath": "nbiservice-issuer-tools/nbiservice-samplemodule-2.0.0.jar",
+              "md5Value": "d8356a21ac488a33aad15c2c8c0f766f"
+            }
+          ],
+          "expectedEntriesInDB": [
+            {
+              "filePath": "nbiservice-issuer-tools/nbiservice-samplemodule-2.0.0.jar",
+              "md5Value": "d8356a21ac488a33aad15c2c8c0f766f",
+              "action": "add"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  
+  "doConsolidationCheck": true,
+  "consolidationAssertList": [
+    {
+      "taskIds": [
+        "DT-000051918"
+      ],
+      "doTaskStatusChangeAuto": true,
+      "isArtifactsAvailable": true,
+      "verifyManifest": false,
+      "verifyDBEntries": false,
+      "isOnlyDeleteInstructionsAvailable":false,
+      "expectedFilesInPackage": [
+        {
+          "filePath": "nbiservice-issuer-tools/nbiservice-samplemodule-2.0.0.jar",
+          "md5Value": "d8356a21ac488a33aad15c2c8c0f766f"
+        }
+      ],
+      
+      "expectedEntriesInManifestXML": [
+      {
+        "filePath": "nbiservice-issuer-tools/nbiservice-samplemodule-2.0.0.jar",
+        "md5Value": "d8356a21ac488a33aad15c2c8c0f766f",
+        "action": "add"
+      }
+      ]
+    }
+  ],
+  "promoteToValFac":{
+  	  "promotedApproval": false,
+      "adjustTaskIdStatusAuto":true
+   },
+   "promoteToProduction":{
+      "promotedApproval": true,
+      "adjustTaskIdStatusAuto":true
+   },
+  "rebase-origin": true,
+  "resetDB": true,
+  "rebase-upstream": true
+}
